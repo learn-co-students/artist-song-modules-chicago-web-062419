@@ -1,4 +1,4 @@
-require 'pry'
+require "pry"
 
 class Song
   attr_accessor :name
@@ -11,7 +11,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    @@songs.detect{|a| a.name == name}
+    @@songs.detect { |a| a.name == name }
   end
 
   def self.all
@@ -31,6 +31,6 @@ class Song
   end
 
   def to_param
-    name.downcase.gsub(' ', '-')
+    name.downcase.gsub(" ", "-")
   end
 end
